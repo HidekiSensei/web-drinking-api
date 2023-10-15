@@ -15,7 +15,7 @@ if ($uri === '/' && $uri === '') {
   return;
 } else if ($uri === '/api/get_question' && $request_method === 'GET') {
   if (array_key_exists('id', $_GET)) {
-    echo json_encode($questionController->getQuestion(intval($_GET['int'])));
+    echo json_encode($questionController->getQuestion(intval($_GET['id'])));
     return;
   }
   echo json_encode($questionController->getQuestionsSet());
